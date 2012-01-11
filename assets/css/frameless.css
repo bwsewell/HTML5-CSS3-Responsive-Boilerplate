@@ -1,0 +1,338 @@
+/*
+	Frameless			<http://framelessgrid.com/>
+	by Joni Korpi 		<http://jonikorpi.com/>
+	licensed under CC0	<http://creativecommons.org/publicdomain/zero/1.0/>
+*/
+/* Default Layout */
+.wrapper {
+  width: 1020px;
+  margin: 0 auto;
+  padding: 0; }
+
+.col {
+  display: inline;
+  float: left;
+  margin-left: 10px;
+  margin-right: 10px; }
+
+.wrapper .col1 {
+  width: 65px; }
+.wrapper .col2 {
+  width: 150px; }
+.wrapper .col3 {
+  width: 235px; }
+.wrapper .col4 {
+  width: 320px; }
+.wrapper .col5 {
+  width: 405px; }
+.wrapper .col6 {
+  width: 490px; }
+.wrapper .col7 {
+  width: 575px; }
+.wrapper .col8 {
+  width: 660px; }
+.wrapper .col9 {
+  width: 745px; }
+.wrapper .col10 {
+  width: 830px; }
+.wrapper .col11 {
+  width: 915px; }
+.wrapper .col12 {
+  width: 1000px; }
+
+/* Tablet Layout */
+@media only screen and (min-width: 960px) and (max-width: 1024px) {
+  .wrapper {
+    width: 960px;
+    margin: 0 auto;
+    padding: 0; }
+
+  .col {
+    display: inline;
+    float: left;
+    margin-left: 10px;
+    margin-right: 10px; }
+
+  .wrapper .col1 {
+    width: 60px; }
+  .wrapper .col2 {
+    width: 140px; }
+  .wrapper .col3 {
+    width: 220px; }
+  .wrapper .col4 {
+    width: 300px; }
+  .wrapper .col5 {
+    width: 380px; }
+  .wrapper .col6 {
+    width: 460px; }
+  .wrapper .col7 {
+    width: 540px; }
+  .wrapper .col8 {
+    width: 620px; }
+  .wrapper .col9 {
+    width: 700px; }
+  .wrapper .col10 {
+    width: 780px; }
+  .wrapper .col11 {
+    width: 860px; }
+  .wrapper .col12 {
+    width: 940px; } }
+/* Tablet Layout */
+@media only screen and (min-width: 768px) and (max-width: 960px) {
+  .wrapper {
+    width: 720px;
+    margin: 0 auto;
+    padding: 0; }
+
+  .col {
+    display: inline;
+    float: left;
+    margin-left: 10px;
+    margin-right: 10px; }
+
+  .wrapper .col1 {
+    width: 40px; }
+  .wrapper .col2 {
+    width: 100px; }
+  .wrapper .col3 {
+    width: 160px; }
+  .wrapper .col4 {
+    width: 220px; }
+  .wrapper .col5 {
+    width: 280px; }
+  .wrapper .col6 {
+    width: 340px; }
+  .wrapper .col7 {
+    width: 400px; }
+  .wrapper .col8 {
+    width: 460px; }
+  .wrapper .col9 {
+    width: 520px; }
+  .wrapper .col10 {
+    width: 580px; }
+  .wrapper .col11 {
+    width: 640px; }
+  .wrapper .col12 {
+    width: 700px; } }
+/* Mobile Layout */
+@media only screen and (max-width: 767px) {
+  .wrapper {
+    width: 300px;
+    margin: 0 auto;
+    padding: 0; }
+
+  .col {
+    display: inline;
+    float: left;
+    margin-left: 10px;
+    margin-right: 10px; }
+
+  .wrapper .col1 {
+    width: 80px; }
+  .wrapper .col2 {
+    width: 280px; }
+  .wrapper .col3 {
+    width: 280px; }
+  .wrapper .col4 {
+    width: 280px; }
+  .wrapper .col5 {
+    width: 280px; }
+  .wrapper .col6 {
+    width: 280px; }
+  .wrapper .col7 {
+    width: 280px; }
+  .wrapper .col8 {
+    width: 280px; }
+  .wrapper .col9 {
+    width: 280px; }
+  .wrapper .col10 {
+    width: 280px; }
+  .wrapper .col11 {
+    width: 280px; }
+  .wrapper .col12 {
+    width: 280px; } }
+/* Wide Mobile Layout */
+@media only screen and (min-width: 480px) and (max-width: 767px) {
+  .wrapper {
+    width: 480px;
+    margin: 0 auto;
+    padding: 0; }
+
+  .col {
+    display: inline;
+    float: left;
+    margin-left: 10px;
+    margin-right: 10px; }
+
+  .wrapper .col1 {
+    width: 60px; }
+  .wrapper .col2 {
+    width: 140px; }
+  .wrapper .col3 {
+    width: 220px; }
+  .wrapper .col4 {
+    width: 460px; }
+  .wrapper .col5 {
+    width: 460px; }
+  .wrapper .col6 {
+    width: 460px; }
+  .wrapper .col7 {
+    width: 460px; }
+  .wrapper .col8 {
+    width: 460px; }
+  .wrapper .col9 {
+    width: 460px; }
+  .wrapper .col10 {
+    width: 460px; }
+  .wrapper .col11 {
+    width: 460px; }
+  .wrapper .col12 {
+    width: 460px; } }
+.alpha {
+  margin-left: 0; }
+
+.omega {
+  margin-right: 0; }
+
+/*
+	Margin, padding, and border resets
+	except for form elements
+*/
+body, div,
+h1, h2, h3, h4, h5, h6,
+p, blockquote, pre, dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend, th, td,
+article, aside, figure, footer, header, hgroup, menu, nav, section {
+  margin: 0;
+  padding: 0;
+  border: 0; }
+
+/*
+	Consistency fixes
+	adopted from http://necolas.github.com/normalize.css/
+*/
+article, aside, details, figcaption, figure,
+footer, header, hgroup, nav, section, audio, canvas, video {
+  display: block; }
+
+html {
+  height: 100%;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%; }
+
+body {
+  min-height: 100%;
+  font-size: 100%; }
+
+sub, sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline; }
+
+sup {
+  top: -0.5em; }
+
+sub {
+  bottom: -0.25em; }
+
+pre {
+  white-space: pre;
+  white-space: pre-wrap;
+  word-wrap: break-word; }
+
+b, strong {
+  font-weight: bold; }
+
+abbr[title] {
+  border-bottom: 1px dotted; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+a img, img {
+  -ms-interpolation-mode: bicubic;
+  border: 0; }
+
+input, textarea, button, select {
+  margin: 0;
+  font-size: 100%;
+  line-height: normal;
+  vertical-align: baseline; }
+
+button,
+html input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+  cursor: pointer;
+  -webkit-appearance: button; }
+
+input[type="checkbox"],
+input[type="radio"] {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  box-sizing: border-box; }
+
+textarea {
+  overflow: auto; }
+
+/*
+	These are easy to forget
+*/
+::selection {
+  background: red;
+  color: white; }
+
+::-moz-selection {
+  background: red;
+  color: white; }
+
+img::selection {
+  background: transparent; }
+
+img::-moz-selection {
+  background: transparent; }
+
+body {
+  -webkit-tap-highlight-color: rgba(255, 0, 0, 0.62); }
+
+/* http://www.yuiblog.com/blog/2010/09/27/clearfix-reloaded-overflowhidden-demystified */
+.clearfix:before,
+.clearfix:after {
+  content: "\0020";
+  display: block;
+  overflow: hidden;
+  visibility: hidden;
+  width: 0;
+  height: 0; }
+
+.clearfix:after {
+  clear: both; }
+
+/*
+The following zoom:1 rule is specifically for IE6 + IE7.
+Move to separate stylesheet if invalid CSS is a problem.
+*/
+.clearfix {
+  zoom: 1; }
+
+/*
+	Style overrides for IE6-8
+	http://jonikorpi.com/leaving-old-IE-behind/
+*/
+/*
+	An easy way to zoom your entire layout in or out (as long as it's set in ems).
+	Just change the media queries to activate them.
+	Assuming your base font-size is 16:
+	- the first one zooms out by a factor of (16-2)/16 = 0.875
+	- the second one zooms in by a factor of (16+2)/16 = 1.125  
+*/
+@media screen and (max-width: 1px) {
+  body {
+    font-size: 0.875em; } }
+@media screen and (max-width: 1px) {
+  body {
+    font-size: 1.125em; } }

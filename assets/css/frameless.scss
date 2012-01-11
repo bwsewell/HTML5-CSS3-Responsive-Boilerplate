@@ -1,0 +1,443 @@
+/*
+	Frameless			<http://framelessgrid.com/>
+	by Joni Korpi 		<http://jonikorpi.com/>
+	licensed under CC0	<http://creativecommons.org/publicdomain/zero/1.0/>
+*/
+
+
+//
+// Configuration
+//
+
+$font-size: 16px; 		// Your base font-size in pixels
+$em: $font-size / 1em;	// Shorthand for outputting ems
+
+//
+// Default Layout, 12 columns
+//
+/* Default Layout */
+$column: 65px;	// The column-width of your grid in pixels
+$gutter: 20px;	// The gutter-width of your grid in pixels
+
+.wrapper {
+  width:($column + $gutter) * 12; // 12 columns
+  margin:0 auto;
+  padding:0;
+}
+
+ $cols1: ( 1 * ($column + $gutter) - $gutter );
+ $cols2: ( 2 * ($column + $gutter) - $gutter );
+ $cols3: ( 3 * ($column + $gutter) - $gutter );
+ $cols4: ( 4 * ($column + $gutter) - $gutter );
+ $cols5: ( 5 * ($column + $gutter) - $gutter );
+ $cols6: ( 6 * ($column + $gutter) - $gutter );
+ $cols7: ( 7 * ($column + $gutter) - $gutter );
+ $cols8: ( 8 * ($column + $gutter) - $gutter );
+ $cols9: ( 9 * ($column + $gutter) - $gutter );
+$cols10: ( 10 * ($column + $gutter) - $gutter );
+$cols11: ( 11 * ($column + $gutter) - $gutter );
+$cols12: ( 12 * ($column + $gutter) - $gutter );
+
+.col {
+  display:inline;
+	float:left;
+	margin-left:($gutter / 2);
+	margin-right:($gutter / 2);
+}
+
+.wrapper {
+  .col1 {width: $cols1;}
+  .col2 {width: $cols2;}
+  .col3 {width: $cols3;}
+  .col4 {width: $cols4;}
+  .col5 {width: $cols5;}
+  .col6 {width: $cols6;}
+  .col7 {width: $cols7;}
+  .col8 {width: $cols8;}
+  .col9 {width: $cols9;}
+  .col10 {width: $cols10;}
+  .col11 {width: $cols11;}
+  .col12 {width: $cols12;}
+}
+
+//
+// Tablet Layout Wide, 12 columns
+//
+/* Tablet Layout */
+@media only screen and (min-width: 960px) and (max-width: 1024px) {
+  
+  $column: 60px;	// The column-width of your grid in pixels
+  $gutter: 20px;	// The gutter-width of your grid in pixels
+  
+  .wrapper {
+    width:($column + $gutter) * 12; // 12 columns
+    margin:0 auto;
+    padding:0;
+  }
+  
+   $cols1: ( 1 * ($column + $gutter) - $gutter );
+   $cols2: ( 2 * ($column + $gutter) - $gutter );
+   $cols3: ( 3 * ($column + $gutter) - $gutter );
+   $cols4: ( 4 * ($column + $gutter) - $gutter );
+   $cols5: ( 5 * ($column + $gutter) - $gutter );
+   $cols6: ( 6 * ($column + $gutter) - $gutter );
+   $cols7: ( 7 * ($column + $gutter) - $gutter );
+   $cols8: ( 8 * ($column + $gutter) - $gutter );
+   $cols9: ( 9 * ($column + $gutter) - $gutter );
+  $cols10: ( 10 * ($column + $gutter) - $gutter );
+  $cols11: ( 11 * ($column + $gutter) - $gutter );
+  $cols12: ( 12 * ($column + $gutter) - $gutter );
+
+  .col {
+    display:inline;
+  	float:left;
+  	margin-left:($gutter / 2);
+  	margin-right:($gutter / 2);
+  }
+
+  .wrapper {
+    .col1 {width: $cols1;}
+    .col2 {width: $cols2;}
+    .col3 {width: $cols3;}
+    .col4 {width: $cols4;}
+    .col5 {width: $cols5;}
+    .col6 {width: $cols6;}
+    .col7 {width: $cols7;}
+    .col8 {width: $cols8;}
+    .col9 {width: $cols9;}
+    .col10 {width: $cols10;}
+    .col11 {width: $cols11;}
+    .col12 {width: $cols12;}
+  }
+}
+
+//
+// Tablet Layout, 12 columns
+//
+/* Tablet Layout */
+@media only screen and (min-width: 768px) and (max-width: 960px) {
+  
+  $column: 40px;	// The column-width of your grid in pixels
+  $gutter: 20px;	// The gutter-width of your grid in pixels
+  
+  .wrapper {
+    width:($column + $gutter) * 12; // 12 columns
+    margin:0 auto;
+    padding:0;
+  }
+  
+   $cols1: ( 1 * ($column + $gutter) - $gutter );
+   $cols2: ( 2 * ($column + $gutter) - $gutter );
+   $cols3: ( 3 * ($column + $gutter) - $gutter );
+   $cols4: ( 4 * ($column + $gutter) - $gutter );
+   $cols5: ( 5 * ($column + $gutter) - $gutter );
+   $cols6: ( 6 * ($column + $gutter) - $gutter );
+   $cols7: ( 7 * ($column + $gutter) - $gutter );
+   $cols8: ( 8 * ($column + $gutter) - $gutter );
+   $cols9: ( 9 * ($column + $gutter) - $gutter );
+  $cols10: ( 10 * ($column + $gutter) - $gutter );
+  $cols11: ( 11 * ($column + $gutter) - $gutter );
+  $cols12: ( 12 * ($column + $gutter) - $gutter );
+
+  .col {
+    display:inline;
+  	float:left;
+  	margin-left:($gutter / 2);
+  	margin-right:($gutter / 2);
+  }
+
+  .wrapper {
+    .col1 {width: $cols1;}
+    .col2 {width: $cols2;}
+    .col3 {width: $cols3;}
+    .col4 {width: $cols4;}
+    .col5 {width: $cols5;}
+    .col6 {width: $cols6;}
+    .col7 {width: $cols7;}
+    .col8 {width: $cols8;}
+    .col9 {width: $cols9;}
+    .col10 {width: $cols10;}
+    .col11 {width: $cols11;}
+    .col12 {width: $cols12;}
+  }
+}
+
+//
+// Mobile Layout, 3 columns
+//
+/* Mobile Layout */
+@media only screen and (max-width: 767px) {
+  
+  $column: 80px;	// The column-width of your grid in pixels
+  $gutter: 20px;	// The gutter-width of your grid in pixels
+  
+  .wrapper {
+    width:($column + $gutter) * 3; // 3 columns
+    margin:0 auto;
+    padding:0;
+  }
+  
+   $cols1: ( 1 * ($column + $gutter) - $gutter );
+   $cols2: ( 3 * ($column + $gutter) - $gutter );
+   $cols3: ( 3 * ($column + $gutter) - $gutter );
+   $cols4: ( 3 * ($column + $gutter) - $gutter );
+   $cols5: ( 3 * ($column + $gutter) - $gutter );
+   $cols6: ( 3 * ($column + $gutter) - $gutter );
+   $cols7: ( 3 * ($column + $gutter) - $gutter );
+   $cols8: ( 3 * ($column + $gutter) - $gutter );
+   $cols9: ( 3 * ($column + $gutter) - $gutter );
+  $cols10: ( 3 * ($column + $gutter) - $gutter );
+  $cols11: ( 3 * ($column + $gutter) - $gutter );
+  $cols12: ( 3 * ($column + $gutter) - $gutter );
+
+  .col {
+    display:inline;
+  	float:left;
+  	margin-left:($gutter / 2);
+  	margin-right:($gutter / 2);
+  }
+
+  .wrapper {
+    .col1 {width: $cols1;}
+    .col2 {width: $cols2;}
+    .col3 {width: $cols3;}
+    .col4 {width: $cols4;}
+    .col5 {width: $cols5;}
+    .col6 {width: $cols6;}
+    .col7 {width: $cols7;}
+    .col8 {width: $cols8;}
+    .col9 {width: $cols9;}
+    .col10 {width: $cols10;}
+    .col11 {width: $cols11;}
+    .col12 {width: $cols12;}
+  }
+}
+
+//
+// Wide Mobile Layout, 6 columns
+//
+/* Wide Mobile Layout */
+@media only screen and (min-width: 480px) and (max-width: 767px) {
+  
+  $column: 60px;	// The column-width of your grid in pixels
+  $gutter: 20px;	// The gutter-width of your grid in pixels
+  
+  .wrapper {
+    width:($column + $gutter) * 6; // 6 columns
+    margin:0 auto;
+    padding:0;
+  }
+  
+   $cols1: ( 1 * ($column + $gutter) - $gutter );
+   $cols2: ( 2 * ($column + $gutter) - $gutter );
+   $cols3: ( 3 * ($column + $gutter) - $gutter );
+   $cols4: ( 6 * ($column + $gutter) - $gutter );
+   $cols5: ( 6 * ($column + $gutter) - $gutter );
+   $cols6: ( 6 * ($column + $gutter) - $gutter );
+   $cols7: ( 6 * ($column + $gutter) - $gutter );
+   $cols8: ( 6 * ($column + $gutter) - $gutter );
+   $cols9: ( 6 * ($column + $gutter) - $gutter );
+  $cols10: ( 6 * ($column + $gutter) - $gutter );
+  $cols11: ( 6 * ($column + $gutter) - $gutter );
+  $cols12: ( 6 * ($column + $gutter) - $gutter );
+
+  .col {
+    display:inline;
+  	float:left;
+  	margin-left:($gutter / 2);
+  	margin-right:($gutter / 2);
+  }
+
+  .wrapper {
+    .col1 {width: $cols1;}
+    .col2 {width: $cols2;}
+    .col3 {width: $cols3;}
+    .col4 {width: $cols4;}
+    .col5 {width: $cols5;}
+    .col6 {width: $cols6;}
+    .col7 {width: $cols7;}
+    .col8 {width: $cols8;}
+    .col9 {width: $cols9;}
+    .col10 {width: $cols10;}
+    .col11 {width: $cols11;}
+    .col12 {width: $cols12;}
+  }
+}
+
+//
+// Retina media query.
+// Overrides styles for devices with a 
+// device-pixel-ratio of 2+, such as iPhone 4.
+//
+@media 
+	only screen and (-webkit-min-device-pixel-ratio: 2),
+	only screen and (min-device-pixel-ratio: 2) {
+	  
+}
+
+.alpha {margin-left: 0;}
+.omega {margin-right: 0;}
+
+/*
+	Margin, padding, and border resets
+	except for form elements
+*/
+
+body, div,
+h1, h2, h3, h4, h5, h6,
+p, blockquote, pre, dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend, th, td,
+article, aside, figure, footer, header, hgroup, menu, nav, section {
+	margin: 0;
+	padding: 0;
+	border: 0;
+}
+
+
+/*
+	Consistency fixes
+	adopted from http://necolas.github.com/normalize.css/
+*/
+
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, nav, section, audio, canvas, video {
+	display: block;
+}
+
+html {
+	height: 100%; 
+	-webkit-text-size-adjust: 100%; 
+	-ms-text-size-adjust: 100%;
+}
+
+	body {min-height: 100%; font-size: 100%;}
+
+sub, sup {
+	font-size: 75%; 
+	line-height: 0; 
+	position: relative; 
+	vertical-align: baseline;
+}
+
+	sup {top: -0.5em;}
+	sub {bottom: -0.25em;}
+
+pre {
+	white-space: pre; 
+	white-space: pre-wrap; 
+	word-wrap: break-word;
+}
+
+b, strong {font-weight: bold;}
+abbr[title] {border-bottom: 1px dotted;}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+a img, img {
+	-ms-interpolation-mode: bicubic;
+	border: 0;
+}
+
+input, textarea, button, select {
+	margin: 0;
+	font-size: 100%;
+	line-height: normal;
+	vertical-align: baseline;
+}
+
+	button,
+	html input[type="button"], 
+	input[type="reset"], 
+	input[type="submit"] {
+	    cursor: pointer;
+	    -webkit-appearance: button;
+	}
+	
+	input[type="checkbox"],
+	input[type="radio"] {
+		-webkit-box-sizing: border-box;
+		   -moz-box-sizing: border-box;
+			 -o-box-sizing: border-box;
+			-ms-box-sizing: border-box;
+				box-sizing: border-box;
+	}
+	
+	textarea {overflow: auto;}
+
+
+/*
+	These are easy to forget
+*/
+
+::selection {
+	background: red;
+	color: white;
+}
+::-moz-selection {
+	background: red;
+	color: white;
+}
+
+img::selection {
+	background: transparent;
+}
+img::-moz-selection {
+	background: transparent;
+}
+
+body {
+	-webkit-tap-highlight-color: rgba(255,0,0, 0.62);
+}
+
+/* http://www.yuiblog.com/blog/2010/09/27/clearfix-reloaded-overflowhidden-demystified */
+.clearfix:before,
+.clearfix:after {
+	content: "\0020";
+	display: block;
+	overflow: hidden;
+	visibility: hidden;
+	width: 0;
+	height: 0;
+}
+.clearfix:after {
+	clear: both;
+}
+/*
+The following zoom:1 rule is specifically for IE6 + IE7.
+Move to separate stylesheet if invalid CSS is a problem.
+*/
+.clearfix {
+	zoom: 1;
+}
+
+/*
+	Style overrides for IE6-8
+	http://jonikorpi.com/leaving-old-IE-behind/
+*/
+
+.ie {
+	
+}
+
+/*
+	An easy way to zoom your entire layout in or out (as long as it's set in ems).
+	Just change the media queries to activate them.
+	Assuming your base font-size is 16:
+	- the first one zooms out by a factor of (16-2)/16 = 0.875
+	- the second one zooms in by a factor of (16+2)/16 = 1.125  
+*/
+
+@media screen and (max-width: 1px) {
+	body {
+		font-size: ($font-size - 2) / $em;
+	}
+}
+
+@media screen and (max-width: 1px) {
+	body {
+		font-size: ($font-size + 2) / $em;
+	}
+}
