@@ -8,70 +8,48 @@ This particular framework utilizes a 12 column grid for the desktop version and 
 When shrinking from a larger grid to a smaller grid, any column greater than the max grid level for that layout be shrunk to the size of the max grid size...  
 
 Sample code:  
-```
-<div class="wrapper">
-  <div class="col col1">1</div>
-  <div class="col col1">1</div>
-  <div class="col col1">1</div>
-  <div class="col col1">1</div>
-  <div class="col col4">4</div>
-  <div class="col col2">2</div>
-  <div class="col col2">2</div>
-</div>
-```
+  <div class="wrapper">
+    <div class="col col1">1</div>
+    <div class="col col1">1</div>
+    <div class="col col1">1</div>
+    <div class="col col1">1</div>
+    <div class="col col4">4</div>
+    <div class="col col2">2</div>
+    <div class="col col2">2</div>
+  </div>
   
 This is how the sample code snippet above would translate as a responsive template:
 
 DESKTOP VERSION
 |----|----|----|----|----------------|--------|--------|
-|    |    |    |    |                |        |        |
 | 1  | 1  | 1  | 1  |        4       |    2   |    2   |
-|    |    |    |    |                |        |        |
 |----|----|----|----|----------------|--------|--------|
 
 TABLET VERSION
 |---|---|---|---|------------|------|------|
-|   |   |   |   |            |      |      |
 | 1 | 1 | 1 | 1 |     4      |  2   |   2  |
-|   |   |   |   |            |      |      |
 |---|---|---|---|------------|------|------|
 
 LANDSCAPE MOBILE
 |---|---|---|---|
-|   |   |   |   |
 | 1 | 1 | 1 | 1 |
-|   |   |   |   |
 |---|---|---|---|
-|               |
 |       4       |
-|               |
 |-------|-------|
-|       |       |
 |   2   |   2   |
-|       |       |
 |-------|-------|
 
 PORTRAIT MOBILE
 |---|---|
-|   |   |
 | 1 | 1 |
-|   |   |
 |---|---|
-|   |   |
 | 1 | 1 |
-|   |   |
 |---|---|
-|       |
 |   4   |
-|       |
 |-------|
-|       |
 |   2   |
-|       |
 |-------|
-|       |
 |   2   |
-|       |
 |-------|
 
 
@@ -95,27 +73,25 @@ Every column should have two classes... `col` and `col#` where # is replaced wit
 `col#` determines the width of the column.  
 
 Every column has a 10 pixel margin on the left and the right.  These margins can cause layout probelms if you have nested columns like this:  
-```
-<div class="wrapper">
-  <div class="col col12">
-    <div class="col col6"</div>
-    <div class="col col3"</div>
-    <div class="col col3"</div>
+  <div class="wrapper">
+    <div class="col col12">
+      <div class="col col6"</div>
+      <div class="col col3"</div>
+      <div class="col col3"</div>
+    </div>
   </div>
-</div>
-```
+
 This presents a tiny issue... every nested column will add more padding to the container column.  We can account for this by getting rid of the left or right padding of a column by adding the class `alpha` or `omega` respectively. These naming conventions were adopted from the widely popular [960 Grid System](http://www.960.gs).  
 
 So the correct way to do nesting would be as follows:  
-```
-<div class="wrapper">
-  <div class="col col12">
-    <div class="col col6 alpha"</div>
-    <div class="col col3"</div>
-    <div class="col col3 omega"</div>
+  <div class="wrapper">
+    <div class="col col12">
+      <div class="col col6 alpha"</div>
+      <div class="col col3"</div>
+      <div class="col col3 omega"</div>
+    </div>
   </div>
-</div>
-```
+
 That way, we get rid of the excess margins on the first and last elements of the nested columns.  
 
 Conditional Responsiveness
@@ -133,34 +109,33 @@ The following classes will allow you to hide/show certain elements in specific l
 * `.hide-mobile` -- Will hide element on a mobile device only (Landscape or Portrait)
 
 These styles can come in handy:
-```
-<div class="wrapper">
-  <div class="col col12">
-    <div id="banner-ad" class="hide-mobile">
-      // AD CODE
+  <div class="wrapper">
+    <div class="col col12">
+      <div id="banner-ad" class="hide-mobile">
+        // AD CODE
+      </div>
+      <ul class="nav">
+        <li><a href="#">Home</li>
+        <li><a href="#">About</li>
+        <li><a href="#">Contact</li>
+      </ul>
     </div>
-    <ul class="nav">
-      <li><a href="#">Home</li>
-      <li><a href="#">About</li>
-      <li><a href="#">Contact</li>
-    </ul>
   </div>
-</div>
-```
+
 The code above would show the banner ad on a desktop and tablet only and hide it on a mobile device.  
 
 Media Queries
 -----
 CSS3 media queries are useful for setting specific styling for elements on specific devices.  If the conditional classes discussed in the previous section aren't enough, you can add more specific styling in the `style_r.css` file under the appropriate media query:  
-```
-/* Mobile Layout */
-@media only screen and (max-width: 767px) {
-  #logo {
-    width:300px;
-    height:40px;
-    background-image:url('logo_small.png');
-  }
-}
-```
+  <style type="text/css" media="screen">
+    /* Mobile Layout */
+    @media only screen and (max-width: 767px) {
+      #logo {
+        width:300px;
+        height:40px;
+        background-image:url('logo_small.png');
+      }
+    }
+  </style>
 
 The snippet above would replace the background image for the `#logo` div on a mobile device.
