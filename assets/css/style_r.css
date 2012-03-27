@@ -1,0 +1,28 @@
+/* MEDIA QUERIES */
+
+/* Desktop Layout */
+@media only screen and (min-width: 768px) {
+
+}
+
+/* Tablet Layout */
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
+  
+}
+
+/* Mobile Layout */
+@media only screen and (max-width: 767px) {
+
+}
+
+/* Wide Mobile Layout */
+@media only screen and (min-width: 480px) and (max-width: 767px) {
+  
+}
+
+/* Retina Display */
+@media 
+	only screen and (-webkit-min-device-pixel-ratio: 2),
+	only screen and (min-device-pixel-ratio: 2) {
+	
+}

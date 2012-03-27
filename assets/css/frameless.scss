@@ -12,62 +12,75 @@
 $font-size: 16px; 		// Your base font-size in pixels
 $em: $font-size / 1em;	// Shorthand for outputting ems
 
+/* Defaults for showing/hiding divs based on screen size */
+.show-default, .show-tablet, .show-mobile-wide, .show-mobile { display:none !important; }
+.hide-default, .hide-tablet, .hide-mobile-wide, .hide-mobile { display:block !important; }
+
 //
 // Default Layout, 12 columns
 //
 /* Default Layout */
-$column: 65px;	// The column-width of your grid in pixels
-$gutter: 20px;	// The gutter-width of your grid in pixels
+@media only screen and (min-width: 1024px) {
 
-.wrapper {
-  width:($column + $gutter) * 12; // 12 columns
-  margin:0 auto;
-  padding:0;
-}
+  $column: 65px;	// The column-width of your grid in pixels
+  $gutter: 20px;	// The gutter-width of your grid in pixels
 
- $cols1: ( 1 * ($column + $gutter) - $gutter );
- $cols2: ( 2 * ($column + $gutter) - $gutter );
- $cols3: ( 3 * ($column + $gutter) - $gutter );
- $cols4: ( 4 * ($column + $gutter) - $gutter );
- $cols5: ( 5 * ($column + $gutter) - $gutter );
- $cols6: ( 6 * ($column + $gutter) - $gutter );
- $cols7: ( 7 * ($column + $gutter) - $gutter );
- $cols8: ( 8 * ($column + $gutter) - $gutter );
- $cols9: ( 9 * ($column + $gutter) - $gutter );
-$cols10: ( 10 * ($column + $gutter) - $gutter );
-$cols11: ( 11 * ($column + $gutter) - $gutter );
-$cols12: ( 12 * ($column + $gutter) - $gutter );
+  .show-default { display:block !important; }
+  .hide-default { display:none !important; }
 
-.col {
-  display:inline;
-	float:left;
-	margin-left:($gutter / 2);
-	margin-right:($gutter / 2);
-}
+  .wrapper {
+    width:($column + $gutter) * 12; // 12 columns
+    margin:0 auto;
+    padding:0;
+  }
 
-.wrapper {
-  .col1 {width: $cols1;}
-  .col2 {width: $cols2;}
-  .col3 {width: $cols3;}
-  .col4 {width: $cols4;}
-  .col5 {width: $cols5;}
-  .col6 {width: $cols6;}
-  .col7 {width: $cols7;}
-  .col8 {width: $cols8;}
-  .col9 {width: $cols9;}
-  .col10 {width: $cols10;}
-  .col11 {width: $cols11;}
-  .col12 {width: $cols12;}
+   $cols1: ( 1 * ($column + $gutter) - $gutter );
+   $cols2: ( 2 * ($column + $gutter) - $gutter );
+   $cols3: ( 3 * ($column + $gutter) - $gutter );
+   $cols4: ( 4 * ($column + $gutter) - $gutter );
+   $cols5: ( 5 * ($column + $gutter) - $gutter );
+   $cols6: ( 6 * ($column + $gutter) - $gutter );
+   $cols7: ( 7 * ($column + $gutter) - $gutter );
+   $cols8: ( 8 * ($column + $gutter) - $gutter );
+   $cols9: ( 9 * ($column + $gutter) - $gutter );
+  $cols10: ( 10 * ($column + $gutter) - $gutter );
+  $cols11: ( 11 * ($column + $gutter) - $gutter );
+  $cols12: ( 12 * ($column + $gutter) - $gutter );
+
+  .col {
+    display:inline;
+  	float:left;
+  	margin-left:($gutter / 2);
+  	margin-right:($gutter / 2);
+  }
+
+  .wrapper {
+    .col1 {width: $cols1;}
+    .col2 {width: $cols2;}
+    .col3 {width: $cols3;}
+    .col4 {width: $cols4;}
+    .col5 {width: $cols5;}
+    .col6 {width: $cols6;}
+    .col7 {width: $cols7;}
+    .col8 {width: $cols8;}
+    .col9 {width: $cols9;}
+    .col10 {width: $cols10;}
+    .col11 {width: $cols11;}
+    .col12 {width: $cols12;}
+  }
 }
 
 //
 // Tablet Layout, 12 columns
 //
 /* Tablet Layout */
-@media only screen and (min-width: 768px) and (max-width: 1024px) {
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
   
   $column: 40px;	// The column-width of your grid in pixels
   $gutter: 20px;	// The gutter-width of your grid in pixels
+  
+  .show-tablet { display:block !important; }
+  .hide-tablet { display:none !important; }
   
   .wrapper {
     width:($column + $gutter) * 12; // 12 columns
@@ -117,8 +130,11 @@ $cols12: ( 12 * ($column + $gutter) - $gutter );
 /* Mobile Layout */
 @media only screen and (max-width: 767px) {
   
-  $column: 80px;	// The column-width of your grid in pixels
+  $column: 84px;	// The column-width of your grid in pixels
   $gutter: 20px;	// The gutter-width of your grid in pixels
+  
+  .show-mobile { display:block !important; }
+  .hide-mobile { display:none !important; }
   
   .wrapper {
     width:($column + $gutter) * 3; // 3 columns
@@ -170,6 +186,9 @@ $cols12: ( 12 * ($column + $gutter) - $gutter );
   
   $column: 60px;	// The column-width of your grid in pixels
   $gutter: 20px;	// The gutter-width of your grid in pixels
+  
+  .show-mobile-wide { display:block !important; }
+  .hide-mobile-wide { display:none !important; }
   
   .wrapper {
     width:($column + $gutter) * 6; // 6 columns
@@ -223,6 +242,61 @@ $cols12: ( 12 * ($column + $gutter) - $gutter );
 	only screen and (min-device-pixel-ratio: 2) {
 	  
 }
+
+//
+// IE Overwrite
+//
+/* IE Overwrite */
+.oldie {
+
+  $column: 65px;	// The column-width of your grid in pixels
+  $gutter: 20px;	// The gutter-width of your grid in pixels
+
+  .show-default { display:block !important; }
+  .hide-default { display:none !important; }
+
+  .wrapper {
+    width:($column + $gutter) * 12; // 12 columns
+    margin:0 auto;
+    padding:0;
+  }
+
+   $cols1: ( 1 * ($column + $gutter) - $gutter );
+   $cols2: ( 2 * ($column + $gutter) - $gutter );
+   $cols3: ( 3 * ($column + $gutter) - $gutter );
+   $cols4: ( 4 * ($column + $gutter) - $gutter );
+   $cols5: ( 5 * ($column + $gutter) - $gutter );
+   $cols6: ( 6 * ($column + $gutter) - $gutter );
+   $cols7: ( 7 * ($column + $gutter) - $gutter );
+   $cols8: ( 8 * ($column + $gutter) - $gutter );
+   $cols9: ( 9 * ($column + $gutter) - $gutter );
+  $cols10: ( 10 * ($column + $gutter) - $gutter );
+  $cols11: ( 11 * ($column + $gutter) - $gutter );
+  $cols12: ( 12 * ($column + $gutter) - $gutter );
+
+  .col {
+    display:inline;
+  	float:left;
+  	margin-left:($gutter / 2);
+  	margin-right:($gutter / 2);
+  }
+
+  .wrapper {
+    .col1 {width: $cols1;}
+    .col2 {width: $cols2;}
+    .col3 {width: $cols3;}
+    .col4 {width: $cols4;}
+    .col5 {width: $cols5;}
+    .col6 {width: $cols6;}
+    .col7 {width: $cols7;}
+    .col8 {width: $cols8;}
+    .col9 {width: $cols9;}
+    .col10 {width: $cols10;}
+    .col11 {width: $cols11;}
+    .col12 {width: $cols12;}
+  }
+}
+
 
 .alpha {margin-left: 0;}
 .omega {margin-right: 0;}
@@ -322,11 +396,11 @@ input, textarea, button, select {
 */
 
 ::selection {
-	background: red;
+	background: #007BC1;
 	color: white;
 }
 ::-moz-selection {
-	background: red;
+	background: #007BC1;
 	color: white;
 }
 
@@ -338,7 +412,7 @@ img::-moz-selection {
 }
 
 body {
-	-webkit-tap-highlight-color: rgba(255,0,0, 0.62);
+	-webkit-tap-highlight-color: #007BC1;
 }
 
 /* http://www.yuiblog.com/blog/2010/09/27/clearfix-reloaded-overflowhidden-demystified */

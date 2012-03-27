@@ -3,45 +3,64 @@
 	by Joni Korpi 		<http://jonikorpi.com/>
 	licensed under CC0	<http://creativecommons.org/publicdomain/zero/1.0/>
 */
+/* Defaults for showing/hiding divs based on screen size */
+.show-default, .show-tablet, .show-mobile-wide, .show-mobile {
+  display: none !important; }
+
+.hide-default, .hide-tablet, .hide-mobile-wide, .hide-mobile {
+  display: block !important; }
+
 /* Default Layout */
-.wrapper {
-  width: 1020px;
-  margin: 0 auto;
-  padding: 0; }
+@media only screen and (min-width: 1024px) {
+  .show-default {
+    display: block !important; }
 
-.col {
-  display: inline;
-  float: left;
-  margin-left: 10px;
-  margin-right: 10px; }
+  .hide-default {
+    display: none !important; }
 
-.wrapper .col1 {
-  width: 65px; }
-.wrapper .col2 {
-  width: 150px; }
-.wrapper .col3 {
-  width: 235px; }
-.wrapper .col4 {
-  width: 320px; }
-.wrapper .col5 {
-  width: 405px; }
-.wrapper .col6 {
-  width: 490px; }
-.wrapper .col7 {
-  width: 575px; }
-.wrapper .col8 {
-  width: 660px; }
-.wrapper .col9 {
-  width: 745px; }
-.wrapper .col10 {
-  width: 830px; }
-.wrapper .col11 {
-  width: 915px; }
-.wrapper .col12 {
-  width: 1000px; }
+  .wrapper {
+    width: 1020px;
+    margin: 0 auto;
+    padding: 0; }
 
+  .col {
+    display: inline;
+    float: left;
+    margin-left: 10px;
+    margin-right: 10px; }
+
+  .wrapper .col1 {
+    width: 65px; }
+  .wrapper .col2 {
+    width: 150px; }
+  .wrapper .col3 {
+    width: 235px; }
+  .wrapper .col4 {
+    width: 320px; }
+  .wrapper .col5 {
+    width: 405px; }
+  .wrapper .col6 {
+    width: 490px; }
+  .wrapper .col7 {
+    width: 575px; }
+  .wrapper .col8 {
+    width: 660px; }
+  .wrapper .col9 {
+    width: 745px; }
+  .wrapper .col10 {
+    width: 830px; }
+  .wrapper .col11 {
+    width: 915px; }
+  .wrapper .col12 {
+    width: 1000px; } }
 /* Tablet Layout */
-@media only screen and (min-width: 768px) and (max-width: 1024px) {
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
+  .show-tablet {
+    display: block !important; }
+
+  .hide-tablet {
+    display: none !important; }
+
   .wrapper {
     width: 720px;
     margin: 0 auto;
@@ -79,8 +98,14 @@
     width: 700px; } }
 /* Mobile Layout */
 @media only screen and (max-width: 767px) {
+  .show-mobile {
+    display: block !important; }
+
+  .hide-mobile {
+    display: none !important; }
+
   .wrapper {
-    width: 300px;
+    width: 312px;
     margin: 0 auto;
     padding: 0; }
 
@@ -91,31 +116,37 @@
     margin-right: 10px; }
 
   .wrapper .col1 {
-    width: 80px; }
+    width: 84px; }
   .wrapper .col2 {
-    width: 280px; }
+    width: 292px; }
   .wrapper .col3 {
-    width: 280px; }
+    width: 292px; }
   .wrapper .col4 {
-    width: 280px; }
+    width: 292px; }
   .wrapper .col5 {
-    width: 280px; }
+    width: 292px; }
   .wrapper .col6 {
-    width: 280px; }
+    width: 292px; }
   .wrapper .col7 {
-    width: 280px; }
+    width: 292px; }
   .wrapper .col8 {
-    width: 280px; }
+    width: 292px; }
   .wrapper .col9 {
-    width: 280px; }
+    width: 292px; }
   .wrapper .col10 {
-    width: 280px; }
+    width: 292px; }
   .wrapper .col11 {
-    width: 280px; }
+    width: 292px; }
   .wrapper .col12 {
-    width: 280px; } }
+    width: 292px; } }
 /* Wide Mobile Layout */
 @media only screen and (min-width: 480px) and (max-width: 767px) {
+  .show-mobile-wide {
+    display: block !important; }
+
+  .hide-mobile-wide {
+    display: none !important; }
+
   .wrapper {
     width: 480px;
     margin: 0 auto;
@@ -151,6 +182,45 @@
     width: 460px; }
   .wrapper .col12 {
     width: 460px; } }
+/* IE Overwrite */
+.oldie .show-default {
+  display: block !important; }
+.oldie .hide-default {
+  display: none !important; }
+.oldie .wrapper {
+  width: 1020px;
+  margin: 0 auto;
+  padding: 0; }
+.oldie .col {
+  display: inline;
+  float: left;
+  margin-left: 10px;
+  margin-right: 10px; }
+.oldie .wrapper .col1 {
+  width: 65px; }
+.oldie .wrapper .col2 {
+  width: 150px; }
+.oldie .wrapper .col3 {
+  width: 235px; }
+.oldie .wrapper .col4 {
+  width: 320px; }
+.oldie .wrapper .col5 {
+  width: 405px; }
+.oldie .wrapper .col6 {
+  width: 490px; }
+.oldie .wrapper .col7 {
+  width: 575px; }
+.oldie .wrapper .col8 {
+  width: 660px; }
+.oldie .wrapper .col9 {
+  width: 745px; }
+.oldie .wrapper .col10 {
+  width: 830px; }
+.oldie .wrapper .col11 {
+  width: 915px; }
+.oldie .wrapper .col12 {
+  width: 1000px; }
+
 .alpha {
   margin-left: 0; }
 
@@ -246,11 +316,11 @@ textarea {
 	These are easy to forget
 */
 ::selection {
-  background: red;
+  background: #007BC1;
   color: white; }
 
 ::-moz-selection {
-  background: red;
+  background: #007BC1;
   color: white; }
 
 img::selection {
@@ -260,7 +330,7 @@ img::-moz-selection {
   background: transparent; }
 
 body {
-  -webkit-tap-highlight-color: rgba(255, 0, 0, 0.62); }
+  -webkit-tap-highlight-color: #007BC1; }
 
 /* http://www.yuiblog.com/blog/2010/09/27/clearfix-reloaded-overflowhidden-demystified */
 .clearfix:before,
