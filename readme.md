@@ -19,66 +19,58 @@ Sample code:
     <div class="col col2">2</div>
   </div>
   
-This is how the sample code snippet above would translate as a responsive template:  
+This is how the sample code snippet above would translate as a responsive template:
+  DESKTOP VERSION
+  *----*----*----*----*----------------*--------*--------*
+  |    |    |    |    |                |        |        |
+  | 1  | 1  | 1  | 1  |        4       |    2   |    2   |
+  |    |    |    |    |                |        |        |
+  *----*----*----*----*----------------*--------*--------*
 
-> DESKTOP VERSION:
-> 
-> *----*----*----*----*----------------*--------*--------*
-> |    |    |    |    |                |        |        |
-> | 1  | 1  | 1  | 1  |        4       |    2   |    2   |
-> |    |    |    |    |                |        |        |
-> *----*----*----*----*----------------*--------*--------*
-> 
-> 
-> TABLET VERSION:
-> 
-> *---*---*---*---*------------*------*------*
-> |   |   |   |   |            |      |      |
-> | 1 | 1 | 1 | 1 |     4      |  2   |   2  |
-> |   |   |   |   |            |      |      |
-> *---*---*---*---*------------*------*------*
-> 
-> 
-> LANDSCAPE MOBILE:
-> 
-> *---*---*---*---*
-> |   |   |   |   |
-> | 1 | 1 | 1 | 1 |
-> |   |   |   |   |
-> *---*---*---*---*
-> |               |
-> |       4       |
-> |               |
-> *-------*-------*
-> |       |       |
-> |   2   |   2   |
-> |       |       |
-> *-------*-------*
-> 
-> 
-> PORTRAIT MOBILE:
-> 
-> *---*---*
-> |   |   |
-> | 1 | 1 |
-> |   |   |
-> *---*---*
-> |   |   |
-> | 1 | 1 |
-> |   |   |
-> *---*---*
-> |       |
-> |   4   |
-> |       |
-> *-------*
-> |       |
-> |   2   |
-> |       |
-> *-------*
-> |       |
-> |   2   |
-> |       |
-> *-------*
+  TABLET VERSION
+  *---*---*---*---*------------*------*------*
+  |   |   |   |   |            |      |      |
+  | 1 | 1 | 1 | 1 |     4      |  2   |   2  |
+  |   |   |   |   |            |      |      |
+  *---*---*---*---*------------*------*------*
+
+  LANDSCAPE MOBILE
+  *---*---*---*---*
+  |   |   |   |   |
+  | 1 | 1 | 1 | 1 |
+  |   |   |   |   |
+  *---*---*---*---*
+  |               |
+  |       4       |
+  |               |
+  *-------*-------*
+  |       |       |
+  |   2   |   2   |
+  |       |       |
+  *-------*-------*
+
+  PORTRAIT MOBILE
+  *---*---*
+  |   |   |
+  | 1 | 1 |
+  |   |   |
+  *---*---*
+  |   |   |
+  | 1 | 1 |
+  |   |   |
+  *---*---*
+  |       |
+  |   4   |
+  |       |
+  *-------*
+  |       |
+  |   2   |
+  |       |
+  *-------*
+  |       |
+  |   2   |
+  |       |
+  *-------*
 
 
 The css files included are:  
@@ -101,24 +93,22 @@ Every column should have two classes... `col` and `col#` where # is replaced wit
 `col#` determines the width of the column.  
 
 Every column has a 10 pixel margin on the left and the right.  These margins can cause layout probelms if you have nested columns like this:  
-
   <div class="wrapper">
     <div class="col col12">
-      <div class="col col6"> </div>
-      <div class="col col3"> </div>
-      <div class="col col3"> </div>
+      <div class="col col6"</div>
+      <div class="col col3"</div>
+      <div class="col col3"</div>
     </div>
   </div>
 
 This presents a tiny issue... every nested column will add more padding to the container column.  We can account for this by getting rid of the left or right padding of a column by adding the class `alpha` or `omega` respectively. These naming conventions were adopted from the widely popular [960 Grid System](http://www.960.gs).  
 
 So the correct way to do nesting would be as follows:  
-
   <div class="wrapper">
     <div class="col col12">
-      <div class="col col6 alpha"> </div>
-      <div class="col col3"> </div>
-      <div class="col col3 omega"> </div>
+      <div class="col col6 alpha"</div>
+      <div class="col col3"</div>
+      <div class="col col3 omega"</div>
     </div>
   </div>
 
@@ -139,20 +129,16 @@ The following classes will allow you to hide/show certain elements in specific l
 * `.hide-mobile` -- Will hide element on a mobile device only (Landscape or Portrait)
 
 These styles can come in handy:  
-
   <div class="wrapper">
     <div class="col col12">
-
       <div id="banner-ad" class="hide-mobile">
         // AD CODE
       </div>
-
       <ul class="nav">
         <li><a href="#">Home</li>
         <li><a href="#">About</li>
         <li><a href="#">Contact</li>
       </ul>
-
     </div>
   </div>
 
